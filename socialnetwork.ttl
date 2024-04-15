@@ -1,0 +1,303 @@
+@prefix : <http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/> .
+
+<http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#commentFrom
+:commentFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :commentProperties ;
+             rdfs:domain :Comment ;
+             rdfs:range :User ;
+             rdfs:comment "which user posted the comment" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#commentHasContent
+:commentHasContent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :commentProperties ;
+                   rdfs:domain :Comment ;
+                   rdfs:range [ rdf:type owl:Restriction ;
+                                owl:onProperty owl:topDataProperty ;
+                                owl:someValuesFrom xsd:string
+                              ] .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#commentProperties
+:commentProperties rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#date
+:date rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:domain :Comment ,
+                  :Message ,
+                  :Post ;
+      rdfs:range [ rdf:type owl:Restriction ;
+                   owl:onProperty owl:topDataProperty ;
+                   owl:someValuesFrom xsd:dateTime
+                 ] ;
+      rdfs:comment "contains the date of a comment, message or post" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#hasComment
+:hasComment rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :postProperties ;
+            rdfs:domain :Post ;
+            rdfs:range :Comment ;
+            rdfs:comment "what comments are on the post" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#likedBy
+:likedBy rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :postProperties ;
+         rdfs:domain :Post ;
+         rdfs:range :User ;
+         rdfs:comment "which users liked the post" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#name
+:name rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :userProperties ;
+      rdfs:domain :User ;
+      rdfs:range [ rdf:type owl:Restriction ;
+                   owl:onProperty owl:topDataProperty ;
+                   owl:someValuesFrom xsd:string
+                 ] ;
+      rdfs:comment "username" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/follows
+:follows rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :userProperties ;
+         rdfs:domain :User ;
+         rdfs:range :User ;
+         rdfs:comment "who the user follows" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isFollowedBy
+:isFollowedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :userProperties ;
+              rdfs:domain :User ;
+              rdfs:range :User ;
+              rdfs:comment "who follows the user" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isInThread
+:isInThread rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :messageProperties ;
+            rdfs:domain :Message ;
+            rdfs:range :Thread ;
+            rdfs:comment "identifies the thread in which a message is sent" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageHasContent
+:messageHasContent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :messageProperties ;
+                   rdfs:domain :Message ;
+                   rdfs:range :MessageImage ,
+                              :MessageText ,
+                              :MessageVideo ;
+                   rdfs:comment "describes the content of a message" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messagePostedBy
+:messagePostedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :messageProperties ;
+                 rdfs:domain :Message ;
+                 rdfs:range :User ;
+                 rdfs:comment "which user posted the message" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageProperties
+:messageProperties rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postHasContent
+:postHasContent rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :postProperties ;
+                rdfs:domain :Post ;
+                rdfs:range :PostImage ,
+                           :PostText ,
+                           :PostVideo ;
+                rdfs:comment "describes the content of a post" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postPostedBy
+:postPostedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :postProperties ;
+              rdfs:domain :Post ;
+              rdfs:range :User ;
+              rdfs:comment "identifies which user posted a post" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties
+:postProperties rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/userProperties
+:userProperties rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain :User ;
+                      rdfs:range :User .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#Comment
+:Comment rdf:type owl:Class ;
+         rdfs:subClassOf :SocialNetworkEntities .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#EnterPassword
+:EnterPassword rdf:type owl:Class ;
+               rdfs:subClassOf :Connect .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#EnterUsername
+:EnterUsername rdf:type owl:Class ;
+               rdfs:subClassOf :Connect .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#Like
+:Like rdf:type owl:Class ;
+      rdfs:subClassOf :WriteOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#PublishComment
+:PublishComment rdf:type owl:Class ;
+                rdfs:subClassOf :WriteOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#SetPassword
+:SetPassword rdf:type owl:Class ;
+             rdfs:subClassOf :CreateAccount .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8#SetUsername
+:SetUsername rdf:type owl:Class ;
+             rdfs:subClassOf :CreateAccount .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Connect
+:Connect rdf:type owl:Class ;
+         rdfs:subClassOf :NetworkingOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/CreateAccount
+:CreateAccount rdf:type owl:Class ;
+               rdfs:subClassOf :NetworkingOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Follow
+:Follow rdf:type owl:Class ;
+        rdfs:subClassOf :NetworkingOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message
+:Message rdf:type owl:Class ;
+         rdfs:subClassOf :Thread ;
+         rdfs:comment "message element from a thread" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageImage
+:MessageImage rdf:type owl:Class ;
+              rdfs:subClassOf :Message .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageText
+:MessageText rdf:type owl:Class ;
+             rdfs:subClassOf :Message .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageVideo
+:MessageVideo rdf:type owl:Class ;
+              rdfs:subClassOf :Message .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/NetworkingOperations
+:NetworkingOperations rdf:type owl:Class ;
+                      rdfs:subClassOf :SocialNetworkOperations ;
+                      rdfs:comment "list of all networking operations" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post
+:Post rdf:type owl:Class ;
+      rdfs:subClassOf :SocialNetworkEntities ;
+      rdfs:comment "entity that represents a post from a user on which other users can react" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostImage
+:PostImage rdf:type owl:Class ;
+           rdfs:subClassOf :Post .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostText
+:PostText rdf:type owl:Class ;
+          rdfs:subClassOf :Post .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostVideo
+:PostVideo rdf:type owl:Class ;
+           rdfs:subClassOf :Post .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PublishPost
+:PublishPost rdf:type owl:Class ;
+             rdfs:subClassOf :WriteOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SendMessage
+:SendMessage rdf:type owl:Class ;
+             rdfs:subClassOf :WriteOperations .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities
+:SocialNetworkEntities rdf:type owl:Class ;
+                       rdfs:subClassOf :SocialNetworkPlatform ;
+                       rdfs:comment "list of all the elements that can exist on the platform" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkOperations
+:SocialNetworkOperations rdf:type owl:Class ;
+                         rdfs:subClassOf :SocialNetworkPlatform ;
+                         rdfs:comment "list of operations allowed on the platform" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkPlatform
+:SocialNetworkPlatform rdf:type owl:Class ;
+                       rdfs:comment "description of a social networking platform" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread
+:Thread rdf:type owl:Class ;
+        rdfs:subClassOf :SocialNetworkEntities .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User
+:User rdf:type owl:Class ;
+      rdfs:subClassOf :SocialNetworkEntities ;
+      rdfs:comment "entity that represents a user" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations
+:WriteOperations rdf:type owl:Class ;
+                 rdfs:subClassOf :SocialNetworkOperations ;
+                 rdfs:comment "list of all writing operations" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

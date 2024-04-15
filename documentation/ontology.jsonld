@@ -1,0 +1,447 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Connect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/NetworkingOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/CreateAccount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/NetworkingOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/EnterPassword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Connect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/EnterUsername",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Connect"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Follow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/NetworkingOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Like",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "message element from a thread"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageVideo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/NetworkingOperations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "list of all networking operations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "entity that represents a post from a user on which other users can react"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostVideo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PublishComment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PublishPost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SendMessage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SetPassword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/CreateAccount"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SetUsername",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/CreateAccount"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "list of all the elements that can exist on the platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkPlatform"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkOperations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "list of operations allowed on the platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkPlatform"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "description of a social networking platform"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "entity that represents a user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/WriteOperations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "list of all writing operations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/SocialNetworkOperations"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "which user posted the comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentHasContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "contains the date of a comment, message or post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/follows",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "who the user follows"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/userProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/hasComment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "what comments are on the post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isFollowedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "who follows the user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/userProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isInThread",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "identifies the thread in which a message is sent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/likedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "which users liked the post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageHasContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "describes the content of a message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageImage"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageText"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageVideo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messagePostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "which user posted the message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "username"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/userProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postHasContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "describes the content of a post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostImage"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostText"
+  }, {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/PostVideo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postPostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "identifies which user posted a post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/userProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User"
+  } ]
+} ]

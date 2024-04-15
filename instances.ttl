@@ -1,0 +1,198 @@
+@prefix : <http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentFrom
+:commentFrom rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/commentHasContent
+:commentHasContent rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/date
+:date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/follows
+:follows rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/hasComment
+:hasComment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isFollowedBy
+:isFollowedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/isInThread
+:isInThread rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/likedBy
+:likedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messageHasContent
+:messageHasContent rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/messagePostedBy
+:messagePostedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/name
+:name rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postHasContent
+:postHasContent rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/postPostedBy
+:postPostedBy rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment
+:Comment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message
+:Message rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageImage
+:MessageImage rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/MessageText
+:MessageText rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post
+:Post rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread
+:Thread rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User
+:User rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Comment
+:Comment rdf:type owl:NamedIndividual ,
+                  :Comment .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/ImageMessage
+:ImageMessage rdf:type owl:NamedIndividual ,
+                       :MessageImage ;
+              :commentHasContent "image url" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message1
+:Message1 rdf:type owl:NamedIndividual ,
+                   :Message ;
+          :date "2024-04-15T15:00:00"^^xsd:dateTime ;
+          :isInThread :Thread ;
+          :messageHasContent :TextMessage ;
+          :messagePostedBy :User2 .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Message2
+:Message2 rdf:type owl:NamedIndividual ,
+                   :Message ;
+          :date "2024-04-15T16:00:00"^^xsd:dateTime ;
+          :isInThread :Thread ;
+          :messageHasContent :ImageMessage ;
+          :messagePostedBy :User3 .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Post
+:Post rdf:type owl:NamedIndividual ,
+               :Post .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/TextMessage
+:TextMessage rdf:type owl:NamedIndividual ,
+                      :MessageText ;
+             :commentHasContent "test message" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/Thread
+:Thread rdf:type owl:NamedIndividual ,
+                 :Thread .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User1
+:User1 rdf:type owl:NamedIndividual ,
+                :User ;
+       :follows :User2 ;
+       :isFollowedBy :User3 ,
+                     :User4 ;
+       :name "Karim" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User2
+:User2 rdf:type owl:NamedIndividual ,
+                :User ;
+       :isFollowedBy :User1 ;
+       :name "Kim-Tchoy" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User3
+:User3 rdf:type owl:NamedIndividual ,
+                :User ;
+       :follows :User1 ;
+       :isFollowedBy :User4 ;
+       :name "Gabriel" .
+
+
+###  http://www.semanticweb.org/gaeta/ontologies/2024/3/untitled-ontology-8/User4
+:User4 rdf:type owl:NamedIndividual ,
+                :User ;
+       :follows :User1 ,
+                :User3 ;
+       :name "Gaétan" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Comment :commentFrom :User1 ;
+         :commentHasContent "test comment" ;
+         :date "2024-04-15T12:00:00"^^xsd:dateTime .
+
+
+:Post :date "2024-04-15T10:00:00"^^xsd:dateTime ;
+      :hasComment :Comment ;
+      :likedBy :User2 ,
+               :User3 ;
+      :postHasContent "test post" ;
+      :postPostedBy :User1 .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
